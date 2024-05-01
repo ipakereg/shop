@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>KAPI lady's fashion</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <style>
+   body {
+        background-image: url('https://ahp.alharamainperfumes.com/wp-content/uploads/2017/01/DSC9094.jpg');
+        background-size:auto;
+        background-position: center;
+    }
+    h1{
+      color:black;
+    }
+    h2{
+      color:white;
+      text-shadow: 3px 3px 3px;
+    }
+    p
+    {
+      color:black;
+    }
+    .info-img {
+  transition: transform 0.3s ease;
+}
+
+.info-img:hover {
+  transform: translateY(-10px);
+}
+.nav-link:hover {
+  background-color: #eaeaea;
+  color: #000;
+}
+.card {
+  transition: transform 0.4s ease;
+  background-color: #eaeaea;
+}
+.card:hover {
+  transform: scale(1.12);
+}
+
+    </style>
+</head>
+<body>
+  <div class="container" >
+    <div class="content">
+        <div class="row">
+          <div class="col-md-16  fixed-top">
+            <ul class="nav nav-pills flex-column flex-md-row justify-content-md-end" style="background-color: black; color:white; height: 60px;">
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContent('home')">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContent('about')">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Services
+                </a>
+                <div class="dropdown-menu" aria-labelledby="servicesDropdown" id="submenu">
+                  <a class="dropdown-item" href="#" onclick="toggleContent('perfume')">PERFUME</a>
+                  <a class="dropdown-item" href="#" onclick="toggleContent('bag')">BAG</a>
+                  <a class="dropdown-item" href="#" onclick="toggleContent('trousers')">TROUSERS</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="toggleContent('contact')">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <section id="contact-info" class="contact-info py-5 bg-light" style="display: none; margin: 55px;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <h2 class="text-center mb-4" style="color: black; text-shadow: 3px 3px 3px;">Contact Us</h2>
+            <form onsubmit="handleSubmit(event)">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="About-info" class="About-info"   style="display: none; background-color: silver; margin:55px">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="mb-4" style="color: black; text-shadow:3px 3px 5px">About me:</h2>
+            <p>
+              Welcome to my world! I'm Kapital Gebrehiwet, a passionate software engineering student currently at Mekelle University. With a deep love for both technology and the art of e-commerce, I have embarked on an exciting journey of creating a captivating website that offers a wide range of brand trousers, perfumes, and bags for women.
+            </p>
+            <p>
+              As a software engineer, I thrive on the challenges of developing innovative solutions that enhance user experiences and streamline online shopping. With a keen eye for detail and a knack for problem-solving, I have meticulously crafted this website to provide a seamless and enjoyable browsing and purchasing experience for men seeking top-quality products.
+            </p>
+            <p>
+              My website brings together a curated selection of brand trousers, perfumes, and bags, tailored specifically for women who value style, sophistication, and quality. With a deep understanding of the latest trends and a commitment to excellence, I have handpicked each product to ensure that they meet the highest standards of craftsmanship.
+            </p>
+            <p>
+              By combining my technical expertise with a passion for e-commerce, I have created an intuitive and user-friendly interface that allows visitors to easily navigate through the extensive collection of products. From casual trousers to elegant bags and irresistible fragrances, my website offers a diverse range of options to suit every individual's taste and style.
+            </p>
+            <p>
+              I am committed to continuously improving and expanding my website to provide an ever-growing selection of high-quality products and an exceptional shopping experience. Customer feedback and suggestions are always welcome as I strive to exceed expectations and build long-lasting relationships with each visitor.
+            </p>
+            <p>
+              Thank you for joining me on this exciting journey of style, elegance, and technology. Explore the world of premium brand trousers, perfumes, and bags for women through my website and discover the perfect addition to your personal collection.
+            </p>
+            <p>
+              Welcome to a world where style meets convenience. Welcome to my website.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <img src="images/kapital.png" class="img-fluid rounded-circle" alt="Kapital Gebrehiwet" width="200px">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="home-info" class="home-info">
+  
+   
+    <div class="collapse navbar-collapse" id="navbarNav">
+     
+    </div>
+  </nav>
+  <section class="hero bg-primary text-white text-center py-5" style="background-color: beige; background-image: url(https://th.bing.com/th/id/OIP.gLNpFPjPx1VCK7AUcNe9VwHaEo?rs=1&pid=ImgDetMain);">
+    <div class="container" >
+      <h1>Welcome to Fashion Shop</h1>
+      <p class="lead">Discover the latest trends in trousers, bags, and perfumes for women.</p>
+    </div>
+  </section>
+
+  <section class="featured-products py-5">
+    <div class="container">
+      <h2 class="text-center mb-4" style="color:white">Featured Products</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="https://di2ponv0v5otw.cloudfront.net/posts/2020/09/27/5f710818771b8e08f9c62434/m_5f71081fc693bd6aff75b363.jpeg" class="card-img-top" alt="Trouser 1">
+            <div class="card-body">
+              <h5 class="card-title">Stylish Trouser</h5>
+              <p class="card-text">Explore our collection of stylish trousers for women.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="https://th.bing.com/th/id/OIP.e15QrN2TKh9_3_s1-qtJnwHaHa?w=195&h=195&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="card-img-top" alt="Bag 1">
+            <div class="card-body">
+              <h5 class="card-title">Fashionable Bag</h5>
+              <p class="card-text">Discover our fashionable collection of bags for women.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <img src="https://th.bing.com/th/id/OIP.yrmwCWC8sXvv83kGA28K5AHaGB?w=246&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="card-img-top" alt="Perfume 1">
+            <div class="card-body">
+              <h5 class="card-title">Elegant Perfume</h5>
+              <p class="card-text">Browse our selection of elegant perfumes for women.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="testimonials bg-light">
+  <div class="container">
+      <h2 class="text-center">What Our Customers Say</h2>
+      <div class="card-container row justify-content-center">
+          <div class="col-md-4">
+              <div class="card">
+                  <div class="card-body">
+                      <blockquote class="blockquote">
+                          <p class="mb-0" style="color:black">"I love the perfume I bought for my wife from your store. It has a captivating fragrance."</p>
+                      </blockquote>
+                      <cite>Kiflom Berihu</cite>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card">
+                  <div class="card-body">
+                      <blockquote class="blockquote">
+                          <p class="mb-0"  style="color:black">"The bag I purchased is not only stylish but also spacious. It's perfect for carrying all my essentials."</p>
+                      </blockquote>
+                      <cite>Nigsti Amdom</cite>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="card">
+                  <div class="card-body">
+                      <blockquote class="blockquote">
+                          <p class="mb-0"  style="color:black">"The trousers I bought from your store are incredibly comfortable and fit perfectly. They have become my favorite pair."</p>
+                      </blockquote>
+                      <cite>Beti Amanual</cite>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+    </div>
+  </section>
+</section>
+  <section id="trousers-info" class="trousers-info" style="display: none;  margin:55px">
+    <h2><center>Brand trousers - trousers Types</center></h2>
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-4">
+          <div class="card mb-3">
+            <img src="https://th.bing.com/th/id/OIP.fV2i-MeFDAY1iXpHGCP8NwHaKu?w=202&h=293&c=7&r=0&o=5&dpr=1.3&pid=1.7" height="400px" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Culottes:</h5>
+              <p class="card-text"><b>Description:</b> Mid-length trousers that are typically wide and flared, resembling a skirt. They offer comfort and versatility.</p>
+              <p class="card-text">Price: 3500 ETB</p>
+              <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+              <div id="contact-dialog-nike"></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-12 col-lg-4">
+          <div class="card mb-3">
+            <img src="https://th.bing.com/th/id/OIP.qXHp2W-vWrW9Cy7RxSGTkwHaJ4?w=202&h=269&c=7&r=0&o=5&dpr=1.3&pid=1.71&rm=2" height="400px" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Wide-Leg Trousers:</h5>
+              <p class="card-text"><b>Description:</b> A loose-fitting style that flares out from the hips, creating a wide and flowing silhouette.</p>
+              <p class="card-text">Price: 4500 ETB</p>
+              <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+              <div id="contact-dialog-nike"></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-12 col-lg-4">
+          <div class="card mb-3">
+            <img src="https://th.bing.com/th/id/OIP.4k1Xt6gd2LXAdT-RCbbmxgHaLH?w=202&h=303&c=7&r=0&o=5&dpr=1.3&pid=1.7" height="400px" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">High-Waisted Pants</h5>
+              <p class="card-text"><b>Description:</b>Trousers that sit above the natural waistline, creating a flattering and elongating effect on the legs.</p>
+              <p class="card-text">Price: 4500 ETB</p>
+              <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+              <div id="contact-dialog-nike"></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-12  col-lg-4">
+          <div class="card mb-3">
+            <img src="https://th.bing.com/th/id/OIP.QVof9lfzXnhYk6-rMh5nFQHaJ3?w=202&h=269&c=7&r=0&o=5&dpr=1.3&pid=1.7" height="400px" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Paperbag Waist Pants:</h5>
+              <p class="card-text"><b>Description:</b> Trousers with a gathered or pleated waistline, often paired with a belt or tie for a cinched and stylish look.</p>
+              <p class="card-text">Price: 4500 ETB</p>
+              <div id="contact-dialog-nike"></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-12 col-lg-4">
+          <div class="card mb-3">
+            <img src="https://th.bing.com/th/id/OIP.SY3GVX7U5L-gI0_uiFyyegHaJ4?w=202&h=269&c=7&r=0&o=5&dpr=1.3&pid=1.7" height="400px" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Cropped Pants</h5>
+              <p class="card-text"><b>Description:</b>Trousers that end above the ankles, offering a modern and chic style suitable for various occasions.</p>
+              <p class="card-text">Price: 4500 ETB</p>
+              <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+              <div id="contact-dialog-nike"></div>
+            </div>
+          </div>
+        </div>
+      
+
+                        <div class="col-md-12 col-lg-4">
+                          <div class="card mb-3">
+                            <img src="https://th.bing.com/th/id/OIP.oAYzOhg6geoSX6VVrmXZSwHaJq?w=202&h=265&c=7&r=0&o=5&dpr=1.3&pid=1.7" height="400px" class="card-img-top">
+                            <div class="card-body">
+                              <h5 class="card-title">Palazzo Pants</h5>
+                              <p class="card-text"><b>Description:</b> Wide-legged trousers that are loose and flowing from the waist down, providing a breezy and relaxed look.</p>
+                              <p class="card-text">Price: 4500 ETB</p>
+                              <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                              <div id="contact-dialog-nike"></div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      
+                            <div class="col-md-12 col-lg-4">
+                              <div class="card mb-3">
+                                <img src="https://th.bing.com/th/id/OIP.pGbuLErHsy-CVQLDmhd9HwAAAA?pid=ImgDet&w=179&h=228&c=7&dpr=1,3" height="400px" class="card-img-top">
+                                <div class="card-body">
+                                  <h5 class="card-title">Jogger Pants</h5>
+                                  <p class="card-text"><b>Description:</b>  Casual and comfortable trousers with a relaxed fit and elasticized or drawstring waistband, often made from soft and stretchy materials.</p>
+                                  <p class="card-text">Price: 4500 ETB</p>
+                                  <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                                  <div id="contact-dialog-nike"></div>
+                                </div>
+                                </div>
+                                </div>
+                          
+                                <div class="col-md-12 col-lg-4">
+                                  <div class="card mb-3">
+                                    <img src="https://th.bing.com/th/id/OIP.SKyqw17W6Ir2msNcSGxyvwHaG_?w=226&h=213&c=7&r=0&o=5&dpr=1.3&pid=1.7" height="400px" class="card-img-top">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Leggings</h5>
+                                      <p class="card-text"><b>Description:</b>   Leggings are form-fitting trousers that are typically made of stretchy materials such as spandex or nylon.</p>
+                                      <p class="card-text">Price: 4500 ETB</p>
+                                      <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                                      <div id="contact-dialog-nike"></div>
+                                    </div>
+                                    </div>
+                                    </div>
+                              
+                              <div class="col-md-12 col-lg-4">
+                                  <div class="card mb-3">
+                                    <img src="https://th.bing.com/th/id/OIP.S7qi_yBKTfzRGlcC5SwZpQHaJ4?w=202&h=270&c=7&r=0&o=5&dpr=1.3&pid=1.7" height="400px" class="card-img-top" >
+                                    <div class="card-body">
+                                      <h5 class="card-title">Skinny Jeans</h5>
+                                      <p class="card-text"><b>Description:</b> Skinny jeans are a popular style of trousers that are known for their tight fit throughout the legs.</p>
+                                      <p class="card-text">Price: 4500 ETB</p>
+                                      <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                                      <div id="contact-dialog-nike"></div>
+                                    </div>
+                                    </div>
+                                    </div>
+                      </div>
+                      </div>      
+        </section>
+        <section id="bag-info" class="bag-info" style="display: none;  margin:55px">
+          <h2><center>Brand BAGS - BAG Types</center></h2>
+          
+  <div class="container">
+  <div class="row">
+    <div class="col-md-12 col-lg-4">
+      <div class="card mb-3">
+        <img src="https://th.bing.com/th/id/OIP.G39C697V5DHgOrCCoZmONQHaHa?w=211&h=211&c=7&r=0&o=5&dpr=1.3&pid=1.7" height="400px" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Mini Crossbody Bag</h5>
+          <p class="card-text"><b>Description:</b>This small and compact crossbody bag is perfect for when you want to carry just the essentials. It typically features a long strap to wear across the body and offers convenience
+             and hands-free functionality while still adding a fashionable touch to your outfit.</p>
+          <p class="card-text">Price: 3500 ETB</p>
+          <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+          <div id="contact-dialog-nike"></div>
+        </div>
+      </div>
+    </div>
+    
+  
+        <div class="col-md-12 col-lg-4">
+          <div class="card mb-3">
+            <img src="https://th.bing.com/th/id/OIP.rHRyQQpQoxcD39NeCjF5YwHaJ4?w=202&h=270&c=7&r=0&o=5&dpr=1.3&pid=1.7" height="400px" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Quilted Shoulder Bag</h5>
+              <p class="card-text"><b>Description:</b>A timeless and elegant option, the quilted shoulder bag often features a chain strap and a textured quilted pattern on the exterior.
+                 It exudes sophistication and can be a statement piece for both casual and formal occasions.</p>
+              <p class="card-text">Price: 4500 ETB</p>
+              <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+              <div id="contact-dialog-nike"></div>
+            </div>
+          </div>
+        </div>
+    
+        
+      
+            <div class="col-md-12 col-lg-4">
+              <div class="card mb-3">
+                <img src="https://th.bing.com/th/id/OIP.F_KQva15mMF2U4Vvv1_E_QEsEc?w=210&h=199&c=7&r=0&o=5&dpr=1.3&pid=1.7"  height="400px" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">printed clutch</h5>
+                  <p class="card-text"><b>Description:</b>The printed clutch is a statement accessory that adds a pop of color and personality to any outfit. It is typically compact and designed to
+                     be carried by hand, making it a versatile option for special events or evenings out.</p>
+                  <p class="card-text">Price: 4500 ETB</p>
+                  <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                  <div id="contact-dialog-nike"></div>
+                </div>
+              </div>
+            </div>
+        
+                <div class="col-md-12 col-lg-4">
+                  <div class="card mb-3">
+                    <img src="https://th.bing.com/th/id/OIP._VFcpnfYuZAl-7M-_hc1iwHaJq?w=202&h=264&c=7&r=0&o=5&dpr=1.3&pid=1.7"  height="400px" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title">structured satchel</h5>
+                      <p class="card-text"><b>Description:</b> The structured satchel is a polished and refined handbag with a structured shape and often features top handles and a detachable shoulder strap.
+                         It offers a timeless appeal and is suitable for both professional and casual settings.</p>
+                      <p class="card-text">Price: 4500 ETB</p>
+                      <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                      <div id="contact-dialog-nike"></div>
+                    </div>
+                  </div>
+                </div>
+            
+                    <div class="col-md-12 col-lg-4">
+                      <div class="card mb-3">
+                        <img src="https://th.bing.com/th/id/OIP.2f4zh-uWcDs-krn6VGzmzwHaIb?w=202&h=230&c=7&r=0&o=5&dpr=1.3&pid=1.7"  height="400px" class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="card-title">Bucket bag</h5>
+                          <p class="card-text"><b>Description:</b>The bucket bag is characterized by its cylindrical shape and drawstring closure. It typically offers a spacious interior and
+                             a relaxed, bohemian vibe, making it a trendy and practical choice for everyday use.</p>
+                          <p class="card-text">Price: 4500 ETB</p>
+                          <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                          <div id="contact-dialog-nike"></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+
+                        <div class="col-md-12 col-lg-4">
+                          <div class="card mb-3">
+                            <img src="https://i.pinimg.com/originals/44/91/89/449189e4ec96d58879bb0d91c5db3dde.png"  height="400px" class="card-img-top">
+                            <div class="card-body">
+                              <h5 class="card-title">wooven straw tote</h5>
+                              <p class="card-text"><b>Description:</b> A perfect option for summer or beach outings, the woven straw tote showcases a natural and rustic charm.
+                                 It often features sturdy handles and a roomy interior, allowing you to carry your essentials while embracing a relaxed and beachy aesthetic.</p>
+                              <p class="card-text">Price: 4500 ETB</p>
+                              <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                              <div id="contact-dialog-nike"></div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        
+                            <div class="col-md-12 col-lg-4">
+                              <div class="card mb-3">
+                                <img src="https://th.bing.com/th/id/OIP.MrGpkDKY4EO26z0orj1mygHaHa?w=193&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7"  height="400px" class="card-img-top">
+                                <div class="card-body">
+                                  <h5 class="card-title">mini backpack</h5>
+                                  <p class="card-text"><b>Description:</b> The mini backpack is a compact and trendy alternative to traditional handbags. It offers a youthful and casual 
+                                    look while providing practicality with its multiple compartments and adjustable straps.</p>
+                                  <p class="card-text">Price: 4500 ETB</p>
+                                  <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                                  <div id="contact-dialog-nike"></div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="col-md-12 col-lg-4">
+                              <div class="card mb-3">
+                                <img src="https://th.bing.com/th/id/OIP.FNg7EhRYxbxdLOmwbBOWtgHaHa?w=198&h=198&c=7&r=0&o=5&dpr=1.3&pid=1.7"  height="400px" class="card-img-top">
+                                <div class="card-body">
+                                  <h5 class="card-title">Balenciaga</h5>
+                                  <p class="card-text"><b>Description:</b> Balenciaga is a luxury fashion brand known for its innovative and avant-garde designs, including their range of handbags.</p>
+                                  <p class="card-text">Price: 4500 ETB</p>
+                                  <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                                  <div id="contact-dialog-nike"></div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="col-md-12 col-lg-4">
+                              <div class="card mb-3">
+                                <img src="https://th.bing.com/th/id/OIP.xsoSLmmk2qwjcw6X7hhkUwHaIX?w=182&h=205&c=7&r=0&o=5&dpr=1.3&pid=1.7"  height="400px" class="card-img-top">
+                                <div class="card-body">
+                                  <h5 class="card-title">mini backpack</h5>
+                                  <p class="card-text"><b>Description:</b>Givenchy bags are often characterized by their elegant and modern aesthetic, with a blend of classic and contemporary elements. The brand is known for its attention to detail, high-quality materials, and impeccable craftsmanship.</p>
+                                  <p class="card-text">Price: 4500 ETB</p>
+                                  <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                                  <div id="contact-dialog-nike"></div>
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                            </div>
+                            
+          
+        </section>
+
+        <section id="perfume-info" class="perfume-info" style="display: none;  margin:55px">
+          <h2><center>Brand perfume - perfume Types</center></h2>
+          
+         <div class="container">
+  <div class="row">
+    <div class="col-md-12 col-lg-4">
+      <div class="card mb-3">
+        <img src="https://th.bing.com/th?id=OIP.GqGkPTSu3P1954mdfoTeZQAAAA&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" height="400px" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Chanel No. 5</h5>
+          <p class="card-text"><b>Description:</b>A timeless classic known for its elegant and sophisticated scent.</p>
+          <p class="card-text">Price: 35000 ETB</p>
+          <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+          <div id="contact-dialog-nike"></div>
+        </div>
+      </div>
+    </div>
+        <div class="col-md-12 col-lg-4">
+          <div class="card mb-3">
+            <img src="https://th.bing.com/th?id=OIP.8uepgALMDCIxDZh-oJI6ygHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" height="400px" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Dior J'adore</h5>
+              <p class="card-text"><b>Description:</b> A floral fragrance with notes of jasmine, rose, and ylang-ylang.</p>
+              <p class="card-text">Price: 45000 ETB</p>
+              <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+              <div id="contact-dialog-nike"></div>
+            </div>
+          </div>
+        </div>
+            <div class="col-md-12 col-lg-4">
+              <div class="card mb-3">
+                <img src="https://th.bing.com/th?id=OIP.mXYQ_ohl0ZauIOmJD9TFyQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"  height="400px" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Gucci Bloom</h5>
+                  <p class="card-text"><b>Description:</b> A modern floral scent featuring notes of tuberose, jasmine, and Rangoon creeper.</p>
+                  <p class="card-text">Price: 15000 ETB</p>
+                  <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                  <div id="contact-dialog-nike"></div>
+                </div>
+              </div>
+            </div>
+                <div class="col-md-12 col-lg-4">
+                  <div class="card mb-3">
+                    <img src="https://th.bing.com/th?id=OIP.K_ZPLLGnVQNX8Ty2fq9uAAHaGH&w=274&h=227&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"  height="400px" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title">Viktor & Rolf Flowerbomb</h5>
+                      <p class="card-text"><b>Description:</b>A sweet and explosive fragrance with notes of jasmine, rose, and patchouli.</p>
+                      <p class="card-text">Price: 4500 ETB</p>
+                      <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                      <div id="contact-dialog-nike"></div>
+                    </div>
+                  </div>
+                </div>
+                    <div class="col-md-12 col-lg-4">
+                      <div class="card mb-3">
+                        <img src="https://th.bing.com/th?id=OIP.yBsaVJ_-DpTyZ-VukNrUcgHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" height="400px" class="card-img-top">
+                        <div class="card-body">
+                          <h5 class="card-title">Marc Jacobs Daisy </h5>
+                          <p class="card-text"><b>Description:</b> A fresh and youthful scent with notes of strawberry, violet leaves, and jasmine.</p>
+                          <p class="card-text">Price: 2000 ETB</p>
+                          <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                          <div id="contact-dialog-nike"></div>
+                        </div>
+                      </div>
+                    </div>
+                        <div class="col-md-12 col-lg-4">
+                          <div class="card mb-3">
+                            <img src="https://th.bing.com/th?id=OIP.oWinTfR5uyRIGwa0Hqh_qQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" height="400px" class="card-img-top" >
+                            <div class="card-body">
+                              <h5 class="card-title">Tom Ford Black Orchid</h5>
+                              <p class="card-text"><b>Description:</b> A luxurious and sensual fragrance with a blend of dark florals, spices, and chocolate.</p>
+                              <p class="card-text">Price: 10000 ETB</p>
+                              <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                              <div id="contact-dialog-nike"></div>
+                            </div>
+                          </div>
+                        </div>
+                            <div class="col-md-12 col-lg-4">
+                              <div class="card mb-3">
+                                <img src="https://th.bing.com/th?id=OIP.rKyvpbR9sVSRJdr7vVqViwHaGf&w=267&h=234&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"  height="400px" class="card-img-top">
+                                <div class="card-body">
+                                  <h5 class="card-title">Lancôme La Vie Est Belle </h5>
+                                  <p class="card-text"><b>Description:</b>A sweet and feminine scent with notes of iris, jasmine, and gourmand accords.</p>
+                                  <p class="card-text">Price: 4500 ETB</p>
+                                  <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                                  <div id="contact-dialog-nike"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-12 col-lg-4">
+                              <div class="card mb-3">
+                                <img src="https://th.bing.com/th?id=OIP.GJEK2ACGH5SEjyJJisQEjwHaKt&w=207&h=300&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"  height="400px" class="card-img-top">
+                                <div class="card-body">
+                                  <h5 class="card-title">Coco Mademoiselle </h5>
+                                  <p class="card-text"><b>Description:</b> A modern and seductive fragrance that exudes femininity and confidence. </p>
+                                  <p class="card-text">Price: 20000 ETB</p>
+                                  <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                                  <div id="contact-dialog-nike"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-12 col-lg-4">
+                              <div class="card mb-3">
+                                <img src="https://th.bing.com/th?id=OIP.JY0dALmJqpRpmiQN1dfWXgHaKD&w=214&h=291&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"  height="400px" class="card-img-top">
+                                <div class="card-body">
+                                  <h5 class="card-title">Black Opium </h5>
+                                  <p class="card-text"><b>Description:</b>A captivating and addictive fragrance that embodies mystery and sensuality.</p>
+                                  <p class="card-text">Price: 14000 ETB</p>
+                                  <button class="btn btn-primary" onclick="displayContactInfo('kapigere00@gmail.com','+251930259299','+251930259299')">Contact Seller</button>
+                                  <div id="contact-dialog-nike"></div>
+                                </div>
+                              </div>
+                            </div>
+        </section>
+        <footer class="footer" style="background: linear-gradient(to bottom right,black, silver); text-align: center;" >
+          <div class="container">
+            <p>&copy; 2024 Kapi lady's fashion shop. All rights reserved.</p>
+            <h2>Contact Information</h2>
+            <div class="row">
+              <div class="col-lg-4 col-md-6">
+                <div class="info-box">
+                  <img src="https://clipart-library.com/images/6Tr5kKkGc.png" width="60px" alt="Phone Icon" class="img-fluid info-img">
+                  <h3>Phone:</h3>
+                  <p>0930259299</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="info-box">
+                  <img src="https://th.bing.com/th?id=OIP.8oONfYSJHjnssOPwxH-qIAHaH_&w=240&h=259&c=8&rs=1&qlt=30&o=6&dpr=1.3&pid=3.1&rm=2" width="60px" alt="Location Icon" class="img-fluid info-img">
+                  <h3>Location:</h3>
+                  <p>Mekelle</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="info-box">
+                  <img src="https://static.vecteezy.com/system/resources/previews/002/557/425/original/google-mail-icon-logo-isolated-on-transparent-background-free-vector.jpg" width="60px" alt="Email Icon" class="img-fluid info-img">
+                  <h3>Email:</h3>
+                  <p>kapigere00@gmail.com</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="info-box">
+                  <img src="https://th.bing.com/th?id=OIP.1uVqd3dRtDFUdoZez4i5SwHaHw&w=244&h=255&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" width="60px" alt="TikTok Icon" class="img-fluid info-img">
+                  <h3>TikTok:</h3>
+                  <p>@kapigere27</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="info-box">
+                  <img src="https://th.bing.com/th?id=OIP.RiSs0t_YUc7Rx2JhK8y0OAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" width="60px" alt="Telegram Icon" class="img-fluid info-img">
+                  <h3>Telegram:</h3>
+                  <p>@ipakap</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function toggleContent(section) {
+  $('#bag-info, #About-info, #contact-info, #home-info, #comment-info, #trousers-info, #perfume-info, #feedback-info').hide();
+  if (section === 'about') {
+    $('#About-info').show();
+  } else if (section === 'contact') {
+    $('#contact-info').show();
+  } else if (section === 'bag') {
+    $('#bag-info').show();
+  } else if (section === 'home') {
+    $('#home-info').show();
+  } else if (section === 'comment') {
+    $('#comment-info').show();
+  } else if (section === 'trousers') {
+    $('#trousers-info').show();
+  } else if (section === 'perfume') {
+    $('#perfume-info').show();
+  }
+  else if (section === 'feedbacks') {
+    $('#feedback-info').show();
+  }
+}
+  document.addEventListener('DOMContentLoaded', function() {
+  var servicesDropdown = document.getElementById('servicesDropdown');
+  servicesDropdown.addEventListener('click', function() {
+    var dropdownMenu = document.querySelector('.dropdown-menu');
+    dropdownMenu.classList.toggle('show');
+    });
+  });
+  
+
+function displayContactInfo(contactEmail, phoneNumber, whatsappNumber) {
+  var contactDialog = event.target.nextElementSibling;
+
+  if (contactDialog.style.display === 'none' || contactDialog.style.display === '') {
+    contactDialog.style.display = 'block';
+  } else {
+    contactDialog.style.display = 'none';
+    return; 
+  }
+
+  contactDialog.innerHTML = ''; 
+
+  var emailLink = document.createElement('a');
+  emailLink.href = 'mailto:' + contactEmail;
+  emailLink.innerText = 'Email: ' + contactEmail;
+  contactDialog.appendChild(emailLink);
+
+  if (phoneNumber) {
+    contactDialog.appendChild(document.createElement('br'));
+    var phoneSpan = document.createElement('span');
+    phoneSpan.innerText = 'Phone: ' + phoneNumber;
+    contactDialog.appendChild(phoneSpan);
+  }
+
+  if (whatsappNumber) {
+    contactDialog.appendChild(document.createElement('br'));
+    var whatsappSpan = document.createElement('span');
+    whatsappSpan.innerText = 'WhatsApp: ' + whatsappNumber;
+    contactDialog.appendChild(whatsappSpan);
+  }
+}
+
+  </script>
+</body>
+</html>
